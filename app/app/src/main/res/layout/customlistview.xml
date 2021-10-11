@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+    <LinearLayout
+        android:id="@+id/body"
+        android:gravity="center|start"
+        android:orientation="horizontal"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="8"
+        android:paddingLeft="8dp">
+
+        <TextView
+            android:paddingLeft="4dp"
+            android:id="@+id/contents"
+            android:textSize="18sp"
+            android:text="Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </TextView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:gravity="end|center"
+        android:layout_weight="2"
+        android:layout_height="match_parent"
+        android:paddingRight="12dp">
+
+        <Button
+            android:id="@+id/btn_listdel"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/baseline_clear_black_18dp">
+
+        </Button>
+
+    </LinearLayout>
+</LinearLayout>

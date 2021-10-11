@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DFF0FD">
+
+    <TextView
+        android:id="@+id/mmm"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:paddingVertical="3dp"
+        android:paddingLeft="20sp"
+        android:text="제목입력"
+        android:textSize="20sp"
+        android:textColor="#35CDBF"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <EditText
+        android:id="@+id/mylist_edit_title"
+        android:background="#FFEBAE"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="제목 입력"
+        android:inputType="text"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mmm"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:paddingLeft="20dp"/>
+
+    <Button
+        android:id="@+id/mylist_nextStep"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFBF00"
+        android:text="내 리스트 작성하러 가기"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <ScrollView
+        android:layout_marginTop="5dp"
+        android:id="@+id/mylist_btn_group"
+        android:background="#FFFFFFFF"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/mylist_edit_title"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/mylist_nextStep">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ToggleButton
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/mylist_toggleButton2"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:textOff=""
+                android:textOn=""
+                android:layout_marginBottom="30dp"
+                android:layout_weight="1"
+                android:id="@+id/mylist_toggleButton1"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:background="@drawable/toiletries_unclicked" />
+
+            <Button
+                android:id="@+id/mylist_textView1"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:background="#FFFFFFFF"
+                android:text="세면도구"
+                android:textColor="#009688"
+                android:textSize="17sp"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/mylist_textView2"
+                app:layout_constraintTop_toBottomOf="@+id/mylist_toggleButton1" />
+
+            <ToggleButton
+                app:layout_constraintRight_toLeftOf="@+id/mylist_toggleButton3"
+                app:layout_constraintLeft_toRightOf="@+id/mylist_toggleButton1"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="30dp"
+                android:textOff=""
+                android:textOn=""
+                android:layout_weight="1"
+                android:id="@+id/mylist_toggleButton2"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:background="@drawable/cloth_unclicked"/>
+
+            <Button
+                android:id="@+id/mylist_textView2"
+                app:layout_constraintLeft_toRightOf="@+id/mylist_textView1"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:background="#FFFFFFFF"
+                app:layout_constraintHorizontal_weight="1"
+                android:text="옷"
+                android:textColor="#009688"
+                android:textSize="17sp"
+                app:layout_constraintRight_toLeftOf="@+id/mylist_textView3"
+                app:layout_constraintTop_toBottomOf="@+id/mylist_toggleButton2" />
+
+            <ToggleButton
+                app:layout_constraintRight_toLeftOf="@+id/mylist_toggleButton4"
+                app:layout_constraintLeft_toRightOf="@+id/mylist_toggleButton2"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="30dp"
+                android:textOff=""
+                android:textOn=""
+                android:layout_weight="1"
+                android:id="@+id/mylist_toggleButton3"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:background="@drawable/baby_unclicked"/>
+
+            <Button
+                android:id="@+id/mylist_textView3"
+                app:layout_constraintLeft_toRightOf="@+id/mylist_textView2"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:background="#FFFFFFFF"
+                android:text="아기용품"
+                app:layout_constraintHorizontal_weight="1"
+                android:textColor="#009688"
+                android:textSize="17sp"
+                app:layout_constraintRight_toLeftOf="@id/mylist_textView4"
+                app:layout_constraintTop_toBottomOf="@+id/mylist_toggleButton3" />
+
+            <ToggleButton
+                app:layout_constraintLeft_toRightOf="@+id/mylist_toggleButton3"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="30dp"
+                android:textOff=""
+                android:textOn=""
+                android:layout_weight="1"
+                android:id="@+id/mylist_toggleButton4"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:background="@drawable/flight_unclicked"
+                android:text="해외여행"/>
+
+            <Button
+                android:id="@+id/mylist_textView4"
+                app:layout_constraintLeft_toRightOf="@id/mylist_textView3"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:background="#FFFFFFFF"
+                android:text="해외여행"
+                app:layout_constraintHorizontal_weight="1"
+                android:textColor="#009688"
+                android:textSize="17sp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mylist_toggleButton4" />
+
+            <ToggleButton
+                android:id="@+id/mylist_toggleButton5"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/beach_unclicked"
+                android:textOff=""
+                android:textOn=""
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/mylist_toggleButton6"
+                app:layout_constraintTop_toBottomOf="@+id/mylist_textView1" />
+
+            <Button
+                android:id="@+id/mylist_textView5"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:text="바다"
+                android:background="#FFFFFFFF"
+                android:layout_marginTop="10dp"
+                android:textColor="#009688"
+                android:textSize="17sp"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/mylist_textView6"
+                app:layout_constraintTop_toBottomOf="@+id/mylist_toggleButton5" />
+
+            <ToggleButton
+                android:id="@+id/mylist_toggleButton6"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/trekking_unclicked"
+                android:textOff=""
+                android:textOn=""
+                app:layout_constraintLeft_toRightOf="@+id/mylist_toggleButton5"
+                app:layout_constraintRight_toLeftOf="@+id/mylist_toggleButton7"
+                app:layout_constraintTop_toBottomOf="@+id/mylist_textView2" />
+
+            <Button
+                android:id="@+id/mylist_textView6"
+                app:layout_constraintLeft_toRightOf="@+id/mylist_textView5"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:text="등산"
+                android:background="#FFFFFFFF"
+                android:layout_marginTop="10dp"
+                android:textColor="#009688"
+                app:layout_constraintHorizontal_weight="1"
+                android:textSize="18sp"
+                app:layout_constraintRight_toLeftOf="@+id/mylist_textView7"
+                app:layout_constraintTop_toBottomOf="@+id/mylist_toggleButton6" />
+
+            <ToggleButton
+                android:id="@+id/mylist_toggleButton7"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="30dp"
+                android:layout_weight="1"
+                android:background="@drawable/sakura_unclicked"
+                android:textOff=""
+                android:textOn=""
+                app:layout_constraintLeft_toRightOf="@+id/mylist_toggleButton6"
+                app:layout_constraintRight_toLeftOf="@+id/mylist_toggleButton8"
+                app:layout_constraintTop_toBottomOf="@+id/mylist_textView3" />
+
+            <Button
+                android:id="@+id/mylist_textView7"
+                app:layout_constraintLeft_toRightOf="@+id/mylist_textView6"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:text="벚꽃놀이"
+                android:background="#FFFFFFFF"
+                android:layout_marginTop="10dp"
+                android:textColor="#009688"
+                app:layout_constraintHorizontal_weight="1"
+                android:textSize="18sp"
+                app:layout_constraintRight_toLeftOf="@id/mylist_textView8"
+                app:layout_constraintTop_toBottomOf="@+id/mylist_toggleButton7" />
+            <ToggleButton
+                app:layout_constraintLeft_toRightOf="@+id/mylist_toggleButton7"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mylist_textView4"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="30dp"
+                android:textOff=""
+                android:textOn=""
+                android:layout_weight="1"
+                android:id="@+id/mylist_toggleButton8"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:background="@drawable/campingtent_unclicked" />
+
+            <Button
+                android:id="@+id/mylist_textView8"
+                app:layout_constraintLeft_toRightOf="@id/mylist_textView7"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:text="캠핑"
+                android:background="#FFFFFFFF"
+                app:layout_constraintHorizontal_weight="1"
+                android:layout_marginTop="10dp"
+                android:textColor="#009688"
+                android:textSize="18sp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mylist_toggleButton8" />
+            <ToggleButton
+                android:id="@+id/mylist_toggleButton9"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:textOff=""
+                android:textOn=""
+                android:layout_weight="1"
+                app:layout_constraintTop_toBottomOf="@+id/mylist_textView5"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/mylist_toggleButton10"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/barbell_unclicked"/>
+
+            <Button
+                android:id="@+id/mylist_textView9"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:background="#FFFFFFFF"
+                android:text="운동"
+                android:textColor="#009688"
+                app:layout_constraintHorizontal_weight="1"
+                android:layout_marginTop="10dp"
+                android:textSize="17sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/mylist_textView10"
+                app:layout_constraintTop_toBottomOf="@+id/mylist_toggleButton9"/>
+            <ToggleButton
+                android:id="@+id/mylist_toggleButton10"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:textOff=""
+                android:textOn=""
+                android:layout_weight="1"
+                app:layout_constraintTop_toBottomOf="@+id/mylist_textView6"
+                app:layout_constraintLeft_toRightOf="@id/mylist_toggleButton9"
+                app:layout_constraintRight_toLeftOf="@id/mylist_toggleButton11"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/backpack_unclicked"/>
+            <Button
+                android:id="@+id/mylist_textView10"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:text="배낭여행"
+                android:background="#FFFFFFFF"
+                app:layout_constraintHorizontal_weight="1"
+                android:textColor="#009688"
+                android:layout_marginTop="10dp"
+                android:textSize="17sp"
+                app:layout_constraintLeft_toRightOf="@+id/mylist_textView9"
+                app:layout_constraintRight_toLeftOf="@+id/mylist_textView11"
+                app:layout_constraintTop_toBottomOf="@+id/mylist_toggleButton10"/>
+            <ToggleButton
+                android:id="@+id/mylist_toggleButton11"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:textOff=""
+                android:textOn=""
+                android:layout_weight="1"
+                app:layout_constraintTop_toBottomOf="@+id/mylist_textView7"
+                app:layout_constraintLeft_toRightOf="@id/mylist_toggleButton10"
+                app:layout_constraintRight_toLeftOf="@id/mylist_toggleButton12"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/ski_unclicked"/>
+            <Button
+                android:id="@+id/mylist_textView11"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:background="#FFFFFFFF"
+                android:text="겨울스포츠"
+                app:layout_constraintHorizontal_weight="1"
+                android:textColor="#009688"
+                android:layout_marginTop="10dp"
+                android:textSize="17sp"
+                app:layout_constraintLeft_toRightOf="@+id/mylist_textView10"
+                app:layout_constraintRight_toLeftOf="@+id/mylist_textView12"
+                app:layout_constraintTop_toBottomOf="@+id/mylist_toggleButton11"/>
+            <ToggleButton
+                android:id="@+id/mylist_toggleButton12"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:textOff=""
+                android:textOn=""
+                android:layout_weight="1"
+                app:layout_constraintTop_toBottomOf="@+id/mylist_textView8"
+                app:layout_constraintLeft_toRightOf="@id/mylist_toggleButton11"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/bike_unclicked"/>
+            <Button
+                android:id="@+id/mylist_textView12"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:text="오토바이"
+                android:layout_marginTop="10dp"
+                android:background="#FFFFFFFF"
+                app:layout_constraintHorizontal_weight="1"
+                android:textColor="#009688"
+                android:textSize="17sp"
+                app:layout_constraintLeft_toRightOf="@+id/mylist_textView11"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mylist_toggleButton12"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
